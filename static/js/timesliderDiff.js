@@ -13,7 +13,6 @@ function updateDiffView(){
       latestContents = data;
     });
   }
-
   $.get(endUrl, function(targetContents){
     if(latestContents != targetContents){
       diffUsingJS(latestContents, targetContents);
