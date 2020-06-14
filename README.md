@@ -4,7 +4,7 @@
 
 NOTE: This is a prototype to show a way to implement this functionality.  This plugin needs rewriting if you want to use it in production.
 
-Want to see what's been changed since you left?
+Want to see what's been changed since you left?  If you want to see a Diff in pad please use ep_what_have_i_missed
 
 Install via the /admin/plugins UI in Etherpad Lite.
 
