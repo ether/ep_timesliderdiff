@@ -1,3 +1,5 @@
+![Publish Status](https://github.com/ether/ep_timesliderdiff/workflows/Node.js%20Package/badge.svg) ![Backend Tests Status](https://github.com/ether/ep_timesliderdiff/workflows/Backend%20tests/badge.svg)
+
 # See changes between revisions in Etherpad timeslider
 
 ![Alt text](http://i.imgur.com/5dqPPFj.png)
