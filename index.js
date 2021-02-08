@@ -1,19 +1,25 @@
+'use strict';
+
 const eejs = require('ep_etherpad-lite/node/eejs');
 
-exports.eejsBlock_timesliderEditbarRight = function (hook_name, args, cb) {
-  args.content = eejs.require('ep_timesliderdiff/templates/timesliderDiff.ejs') + args.content;
-  return cb();
+exports.eejsBlock_timesliderEditbarRight = (hook_name, args, cb) => {
+  args.content = `<script type="text/javascript">${
+    eejs.require('ep_timesliderdiff/templates/timesliderDiff.ejs')
+  }</script>${
+    args.content}`;
+  cb();
 };
 
-exports.eejsBlock_timesliderStyles = function (hook_name, args, cb) {
-  args.content += "<link rel='stylesheet' href='/static/plugins/ep_timesliderdiff/static/css/diffview.css' type='text/css'>";
-  return cb();
+exports.eejsBlock_timesliderStyles = (hook_name, args, cb) => {
+  args.content += '<link rel="stylesheet" ' +
+  'href="/static/plugins/ep_timesliderdiff/static/css/diffview.css" type="text/css">';
+  cb();
 };
 
-exports.eejsBlock_timesliderBody = function (hook_name, args, cb) {
+exports.eejsBlock_timesliderBody = (hook_name, args, cb) => {
   args.content += eejs.require('ep_timesliderdiff/static/js/difflib.js');
   args.content += eejs.require('ep_timesliderdiff/static/js/diffview.js');
   args.content += eejs.require('ep_timesliderdiff/static/js/timesliderDiff.js');
   args.content += eejs.require('ep_timesliderdiff/templates/modal.ejs', {}, module);
-  return cb();
+  cb();
 };
