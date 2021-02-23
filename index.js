@@ -19,7 +19,9 @@ exports.eejsBlock_timesliderStyles = (hook_name, args, cb) => {
 exports.eejsBlock_timesliderBody = (hook_name, args, cb) => {
   args.content += eejs.require('ep_timesliderdiff/static/js/difflib.js');
   args.content += eejs.require('ep_timesliderdiff/static/js/diffview.js');
-  args.content += eejs.require('ep_timesliderdiff/static/js/timesliderDiff.js');
   args.content += eejs.require('ep_timesliderdiff/templates/modal.ejs', {}, module);
+  args.content += '<script type="text/javascript">' +
+    eejs.require('ep_timesliderdiff/static/js/timesliderDiff.js') +
+    '</script>';
   cb();
 };
