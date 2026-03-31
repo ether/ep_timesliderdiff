@@ -1,6 +1,6 @@
 {
   "name": "ep_timesliderdiff",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "See a diff view showing the changes between the latest pad and a revision",
   "author": {
     "name": "John McLear",
@@ -10,7 +10,6 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/JohnMcLear/ep_timesliderdiff.git"
@@ -26,9 +25,9 @@
     "url": "https://etherpad.org/"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
+    "eslint": "^8.57.1",
     "eslint-config-etherpad": "^4.0.4",
-    "typescript": "^5.4.2"
+    "typescript": "^5.9.3"
   },
   "scripts": {
     "lint": "eslint .",
