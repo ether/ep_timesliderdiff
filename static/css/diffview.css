@@ -30,8 +30,7 @@ or implied, of Chas Emerick.
 table.diff {
 	border-collapse:collapse;
 	border:1px solid darkgray;
-	white-space:pre-wrap
-        height:400px;
+	white-space:pre-wrap;
 }
 table.diff tbody { 
 	font-family:Courier, monospace
@@ -90,4 +89,18 @@ tbody {
   height:400px;
   overflow:scroll;
   overflow-x:hidden;
+}
+
+/* Keep the diff popup inside the viewport on long pads — otherwise the
+   form (inline/try-again) gets pushed off the bottom and the user sees no
+   controls (#3). Clamp the popup to the viewport and let the content
+   scroll inside it. */
+.timesliderDiffSettings.popup.toolbar-popup {
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 80px);
+  box-sizing: border-box;
+  overflow: auto;
+}
+.timesliderDiffSettings.popup.toolbar-popup #timesliderDiffOutput {
+  max-width: 100%;
 }
