@@ -8,9 +8,10 @@ const cssPath = path.resolve(__dirname, '..', '..', '..', '..', 'static', 'css',
 
 describe(__filename, function () {
   let src;
-  before(function () { src = fs.readFileSync(cssPath, 'utf8'); });
 
-  it('clamps the diff popup to the viewport (#3)', function () {
+  before(async function () { src = fs.readFileSync(cssPath, 'utf8'); });
+
+  it('clamps the diff popup to the viewport (#3)', async function () {
     // Long pads previously pushed the popup beyond the viewport so the
     // inline checkbox + "try again" button got clipped. The popup has to
     // have both width and height caps and allow its own overflow so the
@@ -24,7 +25,7 @@ describe(__filename, function () {
     assert(/overflow\s*:\s*auto/.test(body), 'popup must set overflow: auto so content scrolls');
   });
 
-  it('does not leave a missing semicolon in the table.diff rule (#3)', function () {
+  it('does not leave a missing semicolon in the table.diff rule (#3)', async function () {
     const rule = src.match(/table\.diff\s*\{([\s\S]*?)\}/);
     assert(rule, 'expected a rule for table.diff');
     // The original source had `white-space:pre-wrap` with no trailing
