@@ -1,6 +1,6 @@
 {
   "name": "ep_timesliderdiff",
-  "version": "0.0.72",
+  "version": "0.0.73",
   "description": "See a diff view showing the changes between the latest pad and a revision",
   "author": {
     "name": "John McLear",
